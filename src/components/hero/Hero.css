@@ -1,0 +1,195 @@
+/* Hero Container */
+.hero-section {
+    background-color: #050505;
+    background-image: url('/images/Editing-Nerchukundam-min.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Very dark background */
+    color: white;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8rem 1rem 4rem 1rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+/* Background effects (optional, based on image "mountains/darkness") */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.4) 0%, #000000 100%);
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Badge Component */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+}
+
+.badge-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fca5a5;
+    /* Placeholder color */
+    overflow: hidden;
+}
+
+.badge-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Headline Component */
+.headline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.headline-sub {
+    font-family: 'Playfair Display', serif;
+    /* Or similar serif/cursive font */
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #9ca3af;
+}
+
+.headline-main {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #8543c7;
+    /* Purple */
+}
+
+.headline-main span {
+    color: #8543c7;
+}
+
+/* Video Marquee Component */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    margin: 3rem 0;
+}
+
+.marquee-content {
+    display: flex;
+    gap: rem;
+    animation: scroll-left 20s linear infinite;
+    width: max-content;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Assumes content is duplicated */
+    }
+}
+
+/* Video Card Component */
+.video-card {
+    width: 500px;
+    height: 360px;
+    background-color: #1f2937;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: #8543c7;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-card:hover .video-overlay {
+    opacity: 1;
+}
+
+.video-title {
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 6rem;
+        background-attachment: fixed;
+        background-position: 75% center;
+    }
+
+    .headline-main {
+        font-size: 2.5rem;
+    }
+
+    .video-card {
+        width: 250px;
+        height: 150px;
+    }
+}

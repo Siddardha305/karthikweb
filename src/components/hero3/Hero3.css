@@ -1,0 +1,265 @@
+/* Hero 3 Container */
+.hero3-section {
+    background-color: #000000;
+    color: white;
+    padding: 6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section Title */
+.hero3-title-container {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.hero3-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.hero3-title span {
+    color: white;
+}
+
+/* Grid Layout */
+.hero3-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    /* Two rows: first for large card, second for smaller ones (actually implementation might vary) */
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Grid cell spanning */
+.hero3-card-large {
+    grid-column: 1 / -1;
+    /* Scale across all columns */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    /* Larger padding */
+}
+
+.hero3-card {
+    background: rgba(10, 10, 10, 0.4);
+    /* Very subtle dark background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero3-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Large Card Content */
+.hero3-large-content {
+    max-width: 50%;
+}
+
+.hero3-card-number {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #262626;
+    /* Dark grey number background effect */
+    line-height: 0.8;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.hero3-card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    line-height: 1.1;
+}
+
+.hero3-card-desc {
+    color: #9ca3af;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+}
+
+/* Button in Large Card */
+.hero3-cta-btn {
+    background-color: #8543c7;
+    /* Purple */
+    color: white;
+    font-weight: 700;
+    padding: 0.8rem 2.5rem;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(133, 67, 199, 0.4);
+    animation: pulsePurple 2s infinite;
+}
+
+.hero3-cta-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Software Icons/Logos specific to Card 1 */
+.hero3-software-icons {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.icon-placeholder {
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #aaa;
+    border: 1px solid #444;
+}
+
+.icon-ae {
+    color: #dcb6fa;
+    border-color: #dcb6fa;
+    background: #2e003e;
+}
+
+.icon-pr {
+    color: #e879f9;
+    border-color: #e879f9;
+    background: #3c004d;
+}
+
+.icon-dv {
+    color: #60a5fa;
+    border-color: #60a5fa;
+    background: #1e3a8a;
+}
+
+/* Standard Card List */
+.hero3-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    margin-top: 3rem;
+    /* Push down below the big number */
+}
+
+.hero3-feature-list li {
+    color: #d1d5db;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.hero3-feature-list li::before {
+    content: '+';
+    color: #9ca3af;
+}
+
+/* New Badge */
+.hero3-new-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    z-index: 10;
+}
+
+/* AI Studio specific */
+.hero3-ai-visual {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* Add glow effect */
+}
+
+.ai-icon-glow {
+    width: 40px;
+    height: 40px;
+    background: #1e1e2e;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #3b82f6;
+    border: 1px solid #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero3-grid {
+        grid-template-columns: 1fr;
+        /* Stack everything */
+    }
+
+    .hero3-title {
+        font-size: 1.8rem;
+    }
+
+    .hero3-card-number {
+        font-size: 4rem;
+    }
+
+    .hero3-card-large {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .hero3-large-content {
+        max-width: 100%;
+    }
+
+    .hero3-software-icons {
+        align-self: flex-start;
+        /* Or center? screenshot shows them on right on desktop maybe */
+        margin-top: 1rem;
+    }
+
+    .hero3-card {
+        min-height: 300px;
+    }
+}

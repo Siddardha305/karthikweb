@@ -1,0 +1,229 @@
+/* Pricing Section Container */
+.pricing-section {
+    padding: 6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background elements if needed (optional) */
+.pricing-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.pricing-section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+/* Grid Layout */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 10;
+}
+
+/* Card Styles */
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    padding: 3.5rem 2.5rem;
+}
+
+/* Variant Styles */
+.pricing-card.essential {
+    background: #18181b;
+    /* Zinc-900 */
+    border-color: #27272a;
+}
+
+.pricing-card.elite {
+    background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
+    /* Blue gradient */
+    border-color: #3b82f6;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.pricing-card.ultimate {
+    background: linear-gradient(180deg, #7f1d1d 0%, #450a0a 100%);
+    /* Red gradient */
+    border: 2px dashed #f87171;
+    /* Dashed border for distinct look */
+    box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
+}
+
+.pricing-card.elite .most-popular-badge {
+    background: white;
+    color: #1e3a8a;
+    /* Blue text */
+}
+
+/* Override Price Colors for Variants */
+.pricing-card.essential .plan-price {
+    color: white;
+}
+
+.pricing-card.elite .plan-price {
+    color: white;
+}
+
+.pricing-card.ultimate .plan-price {
+    color: white;
+}
+
+
+
+
+.most-popular-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #8543c7;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(133, 67, 199, 0.3);
+}
+
+/* Header */
+.pricing-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.plan-price {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #8543c7;
+    /* Purple Price */
+    margin: 0;
+}
+
+.plan-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0.5rem 0 0 0;
+    line-height: 1.4;
+}
+
+.plan-subtitle {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Features List */
+.pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+    /* Pushes footer down */
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.feature-text {
+    font-size: 0.95rem;
+    color: #d1d5db;
+    /* Gray-300 */
+    line-height: 1.5;
+}
+
+/* Footer & Button */
+.pricing-footer {
+    margin-top: auto;
+}
+
+.pricing-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #EAB308;
+    /* Yellow */
+    border: none;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 8px;
+    /* Slightly squarer radius fits the bold style */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pricing-btn:hover {
+    background: #ca8a04;
+    /* Darker yellow on hover */
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 2rem;
+    }
+
+    .pricing-card.recommended {
+        grid-column: span 2;
+        /* Center the recommended one if 2 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .pricing-card.recommended {
+        grid-column: auto;
+    }
+
+    .pricing-section-title {
+        font-size: 2.2rem;
+    }
+}

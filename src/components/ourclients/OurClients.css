@@ -1,0 +1,244 @@
+/* Main Section Container */
+.our-clients-section {
+    background-color: #000000;
+    /* Black */
+    /* Grid Pattern Overlay */
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 5px 5px;
+    padding: 14rem 1rem 3rem 1rem;
+    /* Reset top padding to move text up */
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Gradient Vignette */
+.our-clients-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, #000000 90%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.clients-content-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+.clients-header {
+    text-align: center;
+    position: relative;
+    z-index: 20;
+}
+
+.clients-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #8543c7;
+    /* Purple title */
+    /* text-transform: uppercase; */
+    color: #8543c7;
+}
+
+/* Brand Box - Marquee Layout */
+.brand-box {
+    background: #000;
+    /* Solid black as per reference */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem 0;
+    /* Vertical padding only, horizontal handled by marquee */
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* Hide overflow for marquee */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.brand-marquee-row {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.brand-track {
+    display: flex;
+    gap: 4rem;
+    /* Spacing between logos */
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    width: max-content;
+}
+
+.brand-logo {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: -0.05em;
+    flex-shrink: 0;
+}
+
+.brand-logo:hover {
+    opacity: 1;
+}
+
+/* Scroll Animations */
+.scroll-normal {
+    animation-name: scrollLeftBrands;
+    animation-duration: 20s;
+}
+
+.scroll-reverse {
+    animation-name: scrollRightBrands;
+    animation-duration: 20s;
+}
+
+@keyframes scrollLeftBrands {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scrollRightBrands {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Floating Avatars - Orbital Animation */
+/* We create a large container that spins, and avatars counter-spin */
+.avatar-orbit-container {
+    position: absolute;
+    top: 900px;
+    /* Moved down to increase gap from text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1500px;
+    /* Much larger diameter */
+    height: 1500px;
+    z-index: 10;
+    animation: rotateOrbit 80s linear infinite;
+    /* Slower rotation for larger circle */
+    pointer-events: none;
+    /* Let clicks pass through to center */
+}
+
+/* The avatars need to be positioned on the rim of this container.
+   We will treat the container as the reference frame. */
+.avatar-pos-wrapper {
+    position: absolute;
+    /* Center the wrapper on its coordinate */
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+}
+
+.floating-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background: #111;
+    /* Counter rotate so image stays upright */
+    animation: rotateCounter 80s linear infinite;
+}
+
+.floating-avatar:hover {
+    border-color: #8543c7;
+    z-index: 30;
+    /* Removed transform scale to avoid conflict with animation, or use wrapper for scale */
+}
+
+/* Allow scaling on wrapper on hover? */
+.avatar-pos-wrapper:hover {
+    z-index: 30;
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: transform 0.3s;
+}
+
+.floating-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes rotateOrbit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateCounter {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .clients-title {
+        font-size: 2rem;
+    }
+
+    .brand-box {
+        gap: 1.5rem;
+        padding: 1.5rem 0;
+        max-width: 100%;
+    }
+
+    .avatar-orbit-container {
+        width: 100%;
+        height: 100%;
+        transform: scale(0.4);
+        /* Scale down for mobile */
+        animation: none;
+    }
+
+    .floating-avatar {
+        /* Fallback for mobile: scatter them? or just hide/simplify */
+        animation: none;
+    }
+}
