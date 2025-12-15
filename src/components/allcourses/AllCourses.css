@@ -1,0 +1,190 @@
+.all-courses-section {
+    padding: 8rem 2rem 4rem;
+    min-height: 100vh;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.all-courses-header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.sort-dropdown {
+    background-color: #000;
+    color: white;
+    border: 1px solid #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'Satoshi', sans-serif;
+    cursor: pointer;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.sort-dropdown:hover {
+    border-color: #555;
+}
+
+.sort-dropdown option {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+}
+
+.courses-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Card Styling */
+.course-card-wrapper {
+    background: #111;
+    /* Dark background for dark theme */
+    border: 1px solid #222;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: #333;
+}
+
+.course-thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.course-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.course-main-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.course-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.meta-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.instructor-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: auto;
+    /* Push to bottom of content area if needed */
+}
+
+.instructor-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.instructor-text {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.instructor-name {
+    color: white;
+    font-weight: 500;
+}
+
+.course-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.current-price {
+    color: white;
+    /* Or brand color if preferred, usually white in dark mode is clean */
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.add-cart-btn {
+    background: transparent;
+    border: 1px solid #8543c7;
+    /* Brand Purple */
+    color: #8543c7;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.add-cart-btn:hover {
+    background: #8543c7;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .courses-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .all-courses-section {
+        padding: 6rem 1rem 2rem;
+    }
+}

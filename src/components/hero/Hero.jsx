@@ -20,7 +20,7 @@ const Hero = () => {
                     <button className="auth-button" style={{
                         fontSize: '1rem',
                         padding: '0.8rem 2.5rem',
-                        backgroundColor: '#8543c7' // Match the purple
+                        backgroundColor: '#8543c7'
                     }}>
                         Join now
                     </button>

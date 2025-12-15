@@ -218,6 +218,14 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .our-clients-section {
+        padding-top: 6rem;
+        min-height: 800px;
+        /* Increased height to avoid clipping */
+        justify-content: flex-start;
+        /* Push content to top so absolute orbit works */
+    }
+
     .clients-title {
         font-size: 2rem;
     }
@@ -226,18 +234,21 @@
         gap: 1.5rem;
         padding: 1.5rem 0;
         max-width: 100%;
+        margin-bottom: 50px;
+        /* Reduced margin */
     }
 
     .avatar-orbit-container {
-        width: 100%;
-        height: 100%;
-        transform: scale(0.4);
-        /* Scale down for mobile */
-        animation: none;
+        width: 1500px;
+        height: 1500px;
+        left: 50%;
+        top: 600px;
+        /* Positioned below the content */
+        transform: translate(-50%, -50%) scale(0.22);
+        /* Slightly visible */
     }
 
     .floating-avatar {
-        /* Fallback for mobile: scatter them? or just hide/simplify */
-        animation: none;
+        /* Animation remains active */
     }
 }

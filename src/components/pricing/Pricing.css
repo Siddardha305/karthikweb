@@ -1,6 +1,6 @@
 /* Pricing Section Container */
 .pricing-section {
-    padding: 6rem 1rem;
+    padding: 4rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,10 +28,11 @@
     text-align: center;
 }
 
-/* Grid Layout */
+/* Grid Layout - Flex for Centering */
 .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     width: 100%;
     max-width: 1200px;
@@ -46,7 +47,13 @@
     position: relative;
     overflow: hidden;
     padding: 3.5rem 2.5rem;
-    border-radius: 40px;
+    border-radius: 30px;
+    flex: 1 1 290px;
+    max-width: 460px;
+    /* Decreased width */
+    min-width: 250px;
+    width: 90%;
+    box-sizing: border-box;
 }
 
 /* Variant Styles */
@@ -59,7 +66,7 @@
 .pricing-card.elite {
     background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
     /* Blue gradient */
-    border: 2px dashed white;
+    border: 1px dashed white;
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
 
@@ -203,25 +210,22 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .pricing-grid {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 2rem;
+    .pricing-card {
+        flex: 0 1 calc((100% - 2rem) / 2);
     }
 
-    .pricing-card.recommended {
-        grid-column: span 2;
-        /* Center the recommended one if 2 columns */
+    .pricing-grid {
+        padding: 0 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    .pricing-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
+    .pricing-card {
+        flex: 0 1 100%;
     }
 
-    .pricing-card.recommended {
-        grid-column: auto;
+    .pricing-grid {
+        padding: 0 1rem;
     }
 
     .pricing-section-title {

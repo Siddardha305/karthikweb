@@ -2,7 +2,7 @@ import React from 'react';
 import PricingCard from './PricingCard';
 import './Pricing.css';
 
-const Pricing = () => {
+const Pricing = ({ filterTitle }) => {
     const plans = [
         {
             price: "₹999",
@@ -56,11 +56,15 @@ const Pricing = () => {
         }
     ];
 
+    const filteredPlans = filterTitle
+        ? plans.filter(plan => plan.title.toLowerCase().includes(filterTitle.toLowerCase()))
+        : plans;
+
     return (
         <section className="pricing-section">
             <h2 className="pricing-section-title">Plans For This Program</h2>
             <div className="pricing-grid">
-                {plans.map((plan, index) => (
+                {filteredPlans.map((plan, index) => (
                     <PricingCard key={index} {...plan} />
                 ))}
             </div>
