@@ -31,7 +31,10 @@
     top: 5%;
     right: 0;
     transform: none;
-    opacity: 0.3;
+    opacity: 0.1;
+    /* Reduced opacity */
+    mix-blend-mode: screen;
+    /* Blends with dark background */
     z-index: 5;
     pointer-events: none;
     width: 350px;
@@ -44,7 +47,10 @@
     bottom: 50%;
     left: 10px;
     transform: none;
-    opacity: 0.3;
+    opacity: 0.1;
+    /* Reduced opacity */
+    mix-blend-mode: screen;
+    /* Blends with dark background */
     z-index: 5;
     pointer-events: none;
     width: 300px;

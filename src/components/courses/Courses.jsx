@@ -1,6 +1,7 @@
 import React from 'react';
 import './Courses.css';
 import Pricing from '../pricing/Pricing';
+import OurClients from '../ourclients/OurClients';
 
 const Courses = () => {
     // Data for courses as per reference image
@@ -52,6 +53,11 @@ const Courses = () => {
             {/* Embedded Pricing Section */}
             <div style={{ width: '100%', zIndex: 10 }}>
                 <Pricing />
+            </div>
+
+            {/* Embedded Clients Section */}
+            <div style={{ width: '100%', zIndex: 10, marginTop: '-2rem' }}>
+                <OurClients />
             </div>
         </section>
     );

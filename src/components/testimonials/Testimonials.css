@@ -2,7 +2,7 @@
 .testimonials-section {
     background-color: #000000;
     color: white;
-    padding: 6rem 0;
+    padding: 2rem 0;
     overflow: hidden;
     position: relative;
     display: flex;
@@ -25,9 +25,9 @@
 /* Marquee Container */
 .marquee-row {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     overflow: hidden;
     /* Mask the edges for smooth fade out */
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
@@ -36,7 +36,7 @@
 
 .marquee-track {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     /* Calculate width dynamically or ensure enough duplication */
     width: max-content;
     animation-timing-function: linear;
@@ -48,13 +48,13 @@
 /* Animation Speeds */
 .scroll-left {
     animation-name: scrollLeft;
-    animation-duration: 40s;
+    animation-duration: 60s;
 }
 
 .scroll-right {
     animation-name: scrollRight;
-    animation-duration: 45s;
-    /* Slightly different speed */
+    animation-duration: 60s;
+    /* Same speed as requested */
 }
 
 /* Keyframes */
@@ -82,24 +82,30 @@
 
 /* Card Styling */
 .testimonial-card {
-    background: #09090b;
-    /* Very dark zinc */
-    border: 1px solid #27272a;
-    /* Subtle border */
-    border-radius: 8px;
-    /* Slightly tighter radius */
-    padding: 2rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle white border */
+    border-radius: 16px;
+    /* Rounded corners */
+    padding: 1.5rem;
     /* More generous padding */
-    width: 350px;
+    width: 300px;
+    height: 400px;
+    /* Fixed height for alignment */
     flex-shrink: 0;
     display: flex;
+    flex-direction: column;
+    /* Ensure column layout */
     justify-content: space-between;
-    transition: border-color 0.2s;
+    transition: all 0.3s ease;
 }
 
 .testimonial-card:hover {
-    border-color: #52525b;
-    /* Lighter border on hover */
+    border-color: rgba(255, 255, 255, 0.3);
+    /* Brighter border on hover */
+    background: rgba(255, 255, 255, 0.02);
+    /* Slight tint */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .testimonial-text {
@@ -109,8 +115,8 @@
     line-height: 1.6;
     margin-bottom: 2rem;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-weight: 400;

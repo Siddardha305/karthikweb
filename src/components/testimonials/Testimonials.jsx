@@ -61,10 +61,28 @@ const Testimonials = () => {
         }
     ];
 
+    const testimonialsTelugu = [
+        {
+            text: "నేను తరుణ్ 'వీడియో ఎడిటింగ్ కోహోర్ట్' లో చేరినప్పుడు నాకు ఎడిటింగ్ గురించి అస్సలు ఏమీ తెలియదు, నిజం చెప్పాలంటే కేవలం ఆసక్తితో జాయిన్ అయ్యాను. కానీ ఆ 4 వారాలు నా జీవితాన్ని మార్చేశాయి. ప్రీమియర్ ప్రో మరియు ఆఫ్టర్ ఎఫెక్ట్స్ నేర్చుకోవడం మాత్రమే కాకుండా, క్లయింట్స్ ని ఎలా సంప్రదించాలి, ఫ్రీలాన్సింగ్ ఎలా మొదలుపెట్టాలి అనేది చాలా క్లియర్ గా నేర్పించారు. కోర్సు పూర్తయిన వెంటనే నాకు మొదటి క్లయింట్ దొరికింది, ఇప్పుడు నేను నెలకు 40 వేల వరకు సంపాదిస్తున్నాను. ఒక సాధారణ స్టూడెంట్ గా మొదలై, ఇప్పుడు నా సొంత ఖర్చులు నేనే భరించే స్థాయికి రావడం నాకు చాలా గర్వంగా ఉంది. తరుణ్ అన్న మెంటర్ షిప్ మరియు ఆ కమ్యూనిటీ సపోర్ట్ వల్లే ఇది సాధ్యమైంది.",
+            name: "Sai Krishna",
+            role: "Freelance Editor"
+        },
+        {
+            text: "చాలా మంది అనుకుంటారు వీడియో ఎడిటింగ్ అంటే కేవలం సాఫ్ట్ వేర్ నేర్చుకోవడమే అని, కానీ ఈ కోహోర్ట్ లో చేరాక తెలిసింది ఎడిటింగ్ అంటే స్టోరీటెల్లింగ్ అని. తరుణ్ గారు ప్రతి చిన్న విషయాన్ని చాలా వివరంగా, ప్రాక్టికల్ గా చూపించారు. నేను ఇంజనీరింగ్ చదువుతూనే పార్ట్ టైమ్ గా ఎడిటింగ్ మొదలుపెట్టాను. మొదట్లో కష్టంగా అనిపించినా, లైవ్ క్లాసెస్ మరియు డౌట్ సెషన్స్ వల్ల చాలా ఈజీగా నేర్చుకోగలిగాను. ఇప్పుడు నేను 'ది బోరింగ్ ఎడిట్' లో ఇంటర్న్ షిప్ చేస్తున్నాను. నా తల్లిదండ్రులు కూడా చాలా సంతోషంగా ఉన్నారు. ఎవరైతే కెరీర్ లో ఎదగాలి అనుకుంటున్నారో వారికి ఇది బెస్ట్ ప్లాట్ ఫామ్.",
+            name: "Vamsi",
+            role: "Video Editor"
+        },
+        {
+            text: "ఈ కోహోర్ట్ కేవలం ఎడిటింగ్ క్లాస్ మాత్రమే కాదు, ఇదొక లైఫ్ చేంజింగ్ ఎక్స్ పీరియన్స్. నేను డిగ్రీ మధ్యలో ఉన్నప్పుడు ఏమి చేయాలో తెలియక సతమతమవుతున్న సమయంలో తరుణ్ గారి వీడియో చూసి ఇన్‌స్పైర్ అయి జాయిన్ అయ్యాను. ఆ నిర్ణయం నా కెరీర్ పాత్ ని మార్చేసింది. కోహోర్ట్ లో నేర్చుకున్న స్కిల్స్, ముఖ్యంగా '21 డేస్ ఛాలెంజ్' నాలో కాన్ఫిడెన్స్ ని పెంచింది. ఇప్పుడు నేను ఫుల్ టైమ్ ఫ్రీలాన్సర్ గా వర్క్ చేస్తున్నాను, మరియు యూకే, యుఎస్ క్లయింట్స్ తో డీల్ చేస్తున్నాను. ఒక తెలుగు కుర్రాడిగా గ్లోబల్ క్లయింట్స్ తో పని చేయడం నాకు దక్కిన గొప్ప అవకాశం.",
+            name: "Harsha",
+            role: "Professional Editor"
+        }
+    ];
+
     // Distribute into 3 rows
-    const row1Data = [testimonials1[0], testimonials1[1], testimonials1[2], testimonials2[0]]; // 4 items
-    const row2Data = [testimonials1[3], testimonials1[4], testimonials2[1], testimonials2[2]]; // 4 items
-    const row3Data = [testimonials2[3], testimonials2[4], testimonials1[0], testimonials1[1]]; // Mix to fill 3rd row with 4 items
+    const row1Data = [testimonials1[0], testimonialsTelugu[0], testimonials1[1], testimonials1[2], testimonials2[0]];
+    const row2Data = [testimonials1[3], testimonialsTelugu[1], testimonials1[4], testimonials2[1], testimonials2[2]];
+    const row3Data = [testimonials2[3], testimonials2[4], testimonialsTelugu[2], testimonials1[0], testimonials1[1]];
 
 
 
@@ -85,7 +103,7 @@ const Testimonials = () => {
 
             {/* Row 2 */}
             <div className="marquee-row">
-                <div className="marquee-track scroll-left" style={{ animationDuration: '50s' }}>
+                <div className="marquee-track scroll-left">
                     {[...row2Data, ...row2Data, ...row2Data, ...row2Data].map((item, index) => (
                         <TestimonialCard key={`row2-${index}`} {...item} />
                     ))}
@@ -94,7 +112,7 @@ const Testimonials = () => {
 
             {/* Row 3 */}
             <div className="marquee-row">
-                <div className="marquee-track scroll-left" style={{ animationDuration: '45s' }}>
+                <div className="marquee-track scroll-left">
                     {[...row3Data, ...row3Data, ...row3Data, ...row3Data].map((item, index) => (
                         <TestimonialCard key={`row3-${index}`} {...item} />
                     ))}

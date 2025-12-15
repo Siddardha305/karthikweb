@@ -46,6 +46,7 @@
     position: relative;
     overflow: hidden;
     padding: 3.5rem 2.5rem;
+    border-radius: 40px;
 }
 
 /* Variant Styles */
@@ -58,15 +59,15 @@
 .pricing-card.elite {
     background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
     /* Blue gradient */
-    border-color: #3b82f6;
+    border: 2px dashed white;
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
 
 .pricing-card.ultimate {
     background: linear-gradient(180deg, #7f1d1d 0%, #450a0a 100%);
     /* Red gradient */
-    border: 2px dashed #f87171;
-    /* Dashed border for distinct look */
+    border: none;
+    /* Removed border as requested */
     box-shadow: 0 0 20px rgba(220, 38, 38, 0.2);
 }
 

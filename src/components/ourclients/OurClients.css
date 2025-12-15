@@ -111,12 +111,12 @@
 /* Scroll Animations */
 .scroll-normal {
     animation-name: scrollLeftBrands;
-    animation-duration: 20s;
+    animation-duration: 40s;
 }
 
 .scroll-reverse {
     animation-name: scrollRightBrands;
-    animation-duration: 20s;
+    animation-duration: 40s;
 }
 
 @keyframes scrollLeftBrands {

@@ -5,6 +5,7 @@ import Hero2 from './components/hero2/Hero2';
 import Hero3 from './components/hero3/Hero3';
 import Courses from './components/courses/Courses';
 import Testimonials from './components/testimonials/Testimonials';
+import VideoTestimonials from './components/videotestimonials/VideoTestimonials';
 import OurClients from './components/ourclients/OurClients';
 import Footer from './components/footer/Footer';
 import './App.css';
@@ -18,7 +19,7 @@ function App() {
       {/* <Hero2 /> */}
       {/* <Hero3 /> */}
       <Testimonials />
-      <OurClients />
+      <VideoTestimonials />
       <Footer />
     </div>
   );
