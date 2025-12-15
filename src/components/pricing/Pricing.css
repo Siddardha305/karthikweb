@@ -20,7 +20,7 @@
 }
 
 .pricing-section-title {
-    font-family: 'Inter', sans-serif;
+
     font-size: 3rem;
     font-weight: 800;
     color: white;
@@ -117,7 +117,7 @@
 }
 
 .plan-price {
-    font-family: 'Inter', sans-serif;
+
     font-size: 2.5rem;
     font-weight: 800;
     color: #8543c7;
@@ -126,7 +126,7 @@
 }
 
 .plan-title {
-    font-family: 'Inter', sans-serif;
+
     font-size: 1.25rem;
     font-weight: 700;
     color: white;
@@ -183,7 +183,7 @@
     /* Yellow */
     border: none;
     color: black;
-    font-family: 'Inter', sans-serif;
+
     font-weight: 700;
     font-size: 1rem;
     border-radius: 8px;

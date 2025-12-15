@@ -14,7 +14,7 @@ const Hero = () => {
                 {/* Bottom CTA similar to screenshot */}
                 <div style={{ textAlign: 'center', marginTop: '0' }}>
                     <p style={{ color: '#9ca3af', marginBottom: '1.5rem', maxWidth: '400px', margin: '0 auto 1.5rem' }}>
-                        the ultimate beginner-friendly video editing program, <br />
+                        The ultimate beginner-friendly video editing program, <br />
                         now powered with the most insane AI tools ever.
                     </p>
                     <button className="auth-button" style={{

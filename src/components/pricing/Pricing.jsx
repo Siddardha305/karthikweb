@@ -58,7 +58,7 @@ const Pricing = () => {
 
     return (
         <section className="pricing-section">
-            <h2 className="pricing-section-title">Plans For This Course</h2>
+            <h2 className="pricing-section-title">Plans For This Program</h2>
             <div className="pricing-grid">
                 {plans.map((plan, index) => (
                     <PricingCard key={index} {...plan} />

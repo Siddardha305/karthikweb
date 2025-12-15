@@ -29,7 +29,7 @@ const Courses = () => {
             <img src="/images/background-icon1.png" alt="" className="floating-bg-icon" />
             <img src="/images/background-icon1.png" alt="" className="floating-bg-icon-bottom" />
             <div className="courses-content-wrapper">
-                <h1 className="courses-title">What you'll learn</h1>
+                <h1 className="courses-title">What you can learn</h1>
 
                 <div className="courses-grid">
                     {courses.map((course, index) => (
