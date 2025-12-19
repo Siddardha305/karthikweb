@@ -5,21 +5,21 @@ import './VideoTestimonials.css';
 
 const VideoTestimonials = () => {
     const videos = [
-        { id: 1, videoSrc: "https://drive.google.com/uc?export=download&id=1Bu5i7GsuFRs3WINLywhcnDG9jhKMVMNY" },
-        { id: 2, videoSrc: "https://drive.google.com/uc?export=download&id=1JgiaXUVGQcPtUATdzPa6E_AZG9BKtdcE" },
-        { id: 3, videoSrc: "https://drive.google.com/uc?export=download&id=1izmiODey6cTL4arQBQVlc-5x-YbHO6IL" },
-        { id: 4, videoSrc: "https://drive.google.com/uc?export=download&id=1dyMTkv5Ya66wN6Jw0qYMVV2IdQNjIT4o" },
-        { id: 5, videoSrc: "https://drive.google.com/uc?export=download&id=1s3TKWrPmj2R2IyXUqZG_dXsgXfNjGvDP" },
-        { id: 6, videoSrc: "https://drive.google.com/uc?export=download&id=1Syifhtb2-rW6-fQ162nIAFT3KM11XUwf" },
-        { id: 7, videoSrc: "https://drive.google.com/uc?export=download&id=1d-3KLdoHKsgI4txvETTIGLMF4w4hjdOc" },
-        { id: 8, videoSrc: "https://drive.google.com/uc?export=download&id=1dwLoB7FXs1lEsGV8eV1p8aP-iPu7DQJN" },
-        { id: 9, videoSrc: "https://drive.google.com/uc?export=download&id=1I0-me44pBnu2oguqjIRgXQ2OKWw9aH6a" },
-        { id: 10, videoSrc: "https://drive.google.com/uc?export=download&id=1N7GGnQndnmaA17LXSy5Ps44IVujREVPi" },
-        { id: 11, videoSrc: "https://drive.google.com/uc?export=download&id=1D1bVua1LEXgLTvM6TmlyyCMl2HUcCi7c" },
-        { id: 12, videoSrc: "https://drive.google.com/uc?export=download&id=1MZ0NZZG2NDT6b4BhNOZM-8hHcKg22iPD" },
-        { id: 13, videoSrc: "https://drive.google.com/uc?export=download&id=1WfIuW6ntuenPh1T_VjPyncOejNoRqFT4" },
-        { id: 14, videoSrc: "https://drive.google.com/uc?export=download&id=1oExRnPWnoolTYYV1OSnmmCCjrxL8myzy" },
-        { id: 15, videoSrc: "https://drive.google.com/uc?export=download&id=16Z_C2kH5u6mVTXp9eLwqddMCbErE7HE1" },
+        { id: 1, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Venkat.mp4" },
+        { id: 2, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Stikanth.mp4" },
+        { id: 3, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Srinivas.mp4" },
+        { id: 4, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Sathish.mp4" },
+        { id: 5, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Lokesh.mp4" },
+        { id: 6, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Kamalika-Final.mp4" },
+        { id: 7, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Jayanth.mp4" },
+        { id: 8, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Harish.mp4" },
+        { id: 9, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/F-Surya.mp4" },
+        { id: 10, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Dhananjay.mp4" },
+        { id: 11, videoSrc: "https://planatb.com/wp-content/uploads/2025/08/Babu.mp4" },
+        { id: 12, videoSrc: "https://planatb.com/wp-content/uploads/2025/12/Vydehie-Testmonial-1.mp4" },
+        { id: 13, videoSrc: "https://planatb.com/wp-content/uploads/2025/12/Teju-Testimonial.mp4" },
+        { id: 14, videoSrc: "https://planatb.com/wp-content/uploads/2025/12/Arcahna-Testimonial.mp4" },
+        { id: 15, videoSrc: "https://planatb.com/wp-content/uploads/2025/12/Devi-Prasad.mp4" }
     ];
 
     return (

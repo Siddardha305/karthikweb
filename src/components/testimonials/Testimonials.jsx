@@ -4,85 +4,94 @@ import TestimonialCard from './TestimonialCard';
 
 const Testimonials = () => {
 
-    // Mock Data
-    const testimonials1 = [
+    // Real Data
+    const allTestimonials = [
         {
-            text: "Enrolling in Tharun Speaks Video Editing Cohort was one of my best decisions. Within a month, I got an internship at The Boring Edit, later joined Unacademy, and now I'm working at an AI startup. This cohort teaches way beyond editing; they teach storytelling, freelancing, content creation, and everything you actually need to grow.",
-            name: "Deepak Divakar",
-            role: "Video Editor"
+            name: "M krishna prasad",
+            text: "Premiere and After Effects Course join ayyanu, Subject explanation chala clear ga undadam valla concepts easy ga ardham ayyayi. Editing ante mundu confuse undedi, kani ee courses join ayyaka clarity vachindi and video editing ni career ga serious ga tiskovachu ane confidence vachindi. Karthik Teaching style clear ga undi kabatti beginners kuda easy ga nerchukovachu. Overall ga idi na learning journey lo oka life-changing moment la anipinchindi.",
+            image: "/images/Student testmonials. website/6.png"
         },
         {
-            text: "Hey guys, I am Akash, and I was in my 3rd year of college when I joined. It honestly changed everything for me. Within a few months, I started earning 50-60K a month from editing, which was unreal for me being a student. I took part and won the '21-day challenge' which gave me millions of views.",
-            name: "Akash",
-            role: "Freelancer"
+            name: "Praveen",
+            text: "Starting lo editing basics clear ga ledu, kani course lo concepts step-by-step ga explain chesaru, editing meeda confidence vachindi. Personal Training valla practical knowledge chala improve ayindi and real-time doubts anni clear ayyayi. Training tho paatu placements guidance kuda provide chestunnaru anedi naaku chala manchi vishayam anipinchindi. Job readiness, portifolio building, industry expectations anni clarity tho ardham ayyayi. Overall ga, video editing ni serious career ga tiskovalani anukune vallaki Plan At B training definitely worth it.",
+            image: null
         },
         {
-            text: "Hey everyone, I am Satwik. Before joining Cohort 3, I was just an average 2nd-year B.Tech student with no idea how to start freelancing. Now I earn 40K a month doing video editing. And not just editing, this cohort taught me how to talk to clients, negotiate, and close deals.",
-            name: "Satwik",
-            role: "Content Creator"
+            name: "Pakeerugari naveen sai",
+            text: "Premiere Pro Course join avvadam valla editing lo clarity vachindi. Mundu nenu chala videos try chesanu nerchukundam ani, kani evaru kuda intha clear ga explanation ivvaledu. Main ga videos length perfect ga undadam valla bore feel lekunda easy ga ardham ayyayi. Overall ga course chala useful anipinchindi.",
+            image: "/images/Student testmonials. website/4.png"
         },
         {
-            text: "Hi, I am Prachi. I joined Tharun's Not Just a Video Editing Cohort (Cohort 3). Before this, I was just exploring design with no clear direction. But after joining the cohort, I not only learned Premiere Pro and After Effects from scratch but also understood how to find clients.",
-            name: "Prachi",
-            role: "Designer & Editor"
+            name: "Dashwanth ram",
+            text: "Course lo tools explanation chala clear ga undi and live examples chupinchadam valla prati concept easy ga ardham ayyindi. Just theory kakunda practical ga ela use cheyyalo nerpincharu, anduke editing meeda intrest baga increase ayyindi. Overall ga course experience excellent anipinchindi.",
+            image: "/images/Student testmonials. website/2.png"
         },
         {
-            text: "When I joined this cohort, I just wanted to learn editing as a hobby. I knew nothing about editing before I just found it cool, so I joined the cohort, and then I took part in the 21-day challenge. It changed everything for me; I gained 20k followers from that challenge in just 21 days.",
-            name: "Dhruvil Patel",
-            role: "Influencer"
+            name: "M Tharun",
+            text: "Premiere Pro Course lo join ayyaka learning experience chala positive ga undi. Class time lo vachina doubts anni patience tho clear chesaru, idi naaku chala helpful ayindi. Gradually editing meeda confidence build ayyindi. Overall ga course quality and support rendu excellent anipinchayi",
+            image: "/images/Student testmonials. website/8.png"
+        },
+        {
+            name: "Koduri sathish",
+            text: "Ee course start chese mundu naku eppudu oka bayam undedi — nenu correct ga video edit cheyyagalana? naa edits clients ki nachuthaya? ani. Kani course and personal training join ayyaka aa fear motham poindi. Ippudu flash shoot offers vachina kuda reject chestunna and elanti video ayina confident ga ‘simple ga handle cheseddam’ ani clients ki cheppagalugutunna, bayam ane thought lekunda. Personal training start chesina time lo naa freelancing income around ₹30,000 undedi, ippudu present freelancing salary ₹60,000 ki reach ayindi. Naa experience share cheyyadam chala happy ga undi. Karthik anna eppudu encourage chestu next level ki grow avvali ani motivate chestaru. Thank you so much Karthik anna",
+            image: "/images/Student testmonials. website/9.png"
+        },
+        {
+            name: "Dhana Raj",
+            text: "At a time lo Premiere Pro, After Effects, Photoshop ani 3 courses join ayyanu. Present lo Premiere Pro Course complete chesi regular ga practice chesanu, After Effects Course half complete chesanu. Ee learning process valla ippudu nenu oka private news channel lo Video Editor ga work chestunnanu. Concepts clear ga explain cheyyadam, practical approach undadam na career ki chala help ayindi. Ee opportunity ki main reason Plan At B training ani cheppochu. Big thanks to Plan At B and special thanks to Karthik anna for the clear explanations and guidance 🙌🏻🙌🏻",
+            image: "/images/Student testmonials. website/5.png"
+        },
+        {
+            name: "Pavan Ram",
+            text: "Past lo nenu oka editing course tiskunnanu kani concepts sariga ardham kaaledu. Kani paln at b lo Premiere Pro Course join ayyaka, mi explanation valla prati topic chala clear ga ardham ayyindi. Simple language lo, step-by-step ga cheppadam valla editing easy ga anipinchindi. Ee course naku chala help ayindi, overall ga experience excellent.",
+            image: null
+        },
+        {
+            name: "N sai bharadwaja",
+            text: "First time nenu video editing nerchukuntunnanu and ee Premiere Pro Course experience chala excellent ga undi. Teaching style chala clear ga undadam valla everyday practice cheyyagalugutunnanu and gradual ga improvement kanipistondi. Idi naaku oka game changer la anipistondi. Low price lo software and resources tho course offer cheyyadam chala great initiative. Great thanks anna, you really did a great job",
+            image: "/images/Student testmonials. website/7.png"
+        },
+        {
+            name: "Marikal phaniketh",
+            text: "Very good,explanation of the videos,clarity.oka manchi course with a 10 years of experienced mentor.valuable,usefull assets. And also hiring posts are very good,gud opportunity for all.affordable price for premiere pro course",
+            image: null
+        },
+        {
+            name: "Harsha Ranjith Yarramsetty",
+            text: "Training experience chala excellent ga undi. Explanation super ga chepparu and editing lo clarity vachindi. Good mentor guidance tho train avvadam valla learning process easy ga anipinchindi. Overall ga ee course chala nice experience.",
+            image: null
+        },
+        {
+            name: "mogal irfan",
+            text: "One thing nenu clear ga cheppali ante — editing meeda serious ga unna vaallu maatrame ila invest chesi skills grow chestaru, and nenu kuda alanti vaallalo okadini. Course buy chesaka nenu totally satisfied. Editing clarity chala improve ayindi and ee course lo chala new things nerchukunna. Overall ga idi 10/10 experience.",
+            image: "/images/Student testmonials. website/1.png"
+        },
+        {
+            name: "K. Aravind chary",
+            text: "Meru cheppe vidhanam chala bagundhi and concepts clear ga ardham ayyayi. Nenu already oka institute lo classes join ayyanu kani akada explanation sariga ledu, response & support kuda undedi kaadu. Mee basic course lo ne explanation intha clear ga undadam naku chala surprise ayindi. Affordable fee ki antha quality content, clarity and support ivvadam really appreciable. Course start chesina tharvatha editing meeda proper understanding vachindi. Thank you sir, ee amount ki intha baga nerpinchinanduku.",
+            image: null
+        },
+        {
+            name: "Prakash",
+            text: "Meru cheppe teaching skills valla nenu chala nerchukunnanu. Chala mandi just script and raw material ivvadam varake limited untaru, kani ee course lo video ela edit cheyyali, decision making ela undali ane clarity kuda icharu. Job ela get cheyyali, industry lo ela approach avvali ane guidance kuda chala useful ga undi. Overall ga editing clarity vachindi and course experience very good",
+            image: null
+        },
+        {
+            name: "Tanuja Bolla",
+            text: "Personal Training valla real-time projects meeda work cheyyadam nerchukunna and software use cheyyadam lo full comfort vachindi. Practical experience tho paatu industry-ready mindset kuda develop ayyindi. Overall ga ee training nannu job readiness side strong ga prepare chesindi.",
+            image: null
+        },
+        {
+            name: "Kolimigundla Sankar",
+            text: "First time video editing start cheyyadam koncham bayam ga undedi, kani Premiere Pro Course join chesi, videos vinadam and practice cheyyadam start chesaka, ‘I can do it’ ane confidence vachindi. Mainly Karthik gari teaching valla clarity and understanding chala improve ayyindi. Ee course, especially ee price ki, offer cheyyadam chala great anipinchindi. Thank you so much Karthik garu, forever grateful for this experience.",
+            image: "/images/Student testmonials. website/3.png"
         }
     ];
 
-    const testimonials2 = [
-        {
-            text: "I joined Cohort 1 with zero direction in life, and it completely changed my life. After the cohort, I mastered editing, left college, and moved to Bangalore to join Tharun Speaks' team. Since then, I've been earning in lakhs and also started an Instagram page 'Indian video school'.",
-            name: "Mazis",
-            role: "Team Member @ Tharun Speaks"
-        },
-        {
-            text: "Before joining Cohort 3, I used to edit on Kinemaster and VN because I was too scared to open Premiere Pro. But within a few weeks, I started editing confidently for both short and long-form videos. The live classes, mentors, and community were the best part.",
-            name: "Vishal Dake",
-            role: "Editor"
-        },
-        {
-            text: "Before joining Cohort 1, I used to deliver newspapers early in the morning just to support my family. I never thought video editing could change my life, but it did. After the cohort, Tharun noticed my work and offered me a chance to work with him. I moved to Bangalore.",
-            name: "Aashil Raza",
-            role: "Senior Editor"
-        },
-        {
-            text: "Hey guys, I am Padmesh, 19 years old, and currently studying in the UK. I am a student of Tharun's first cohort, and it was a game-changer for me. I went from a beginner to a pro at Premiere Pro. While others are going to college and trying to find a side hustle, I was earning a good amount.",
-            name: "Padmesh",
-            role: "Student & Editor"
-        },
-        {
-            text: "The community here is amazing, and people genuinely support you. I even got my first freelance client through a special shoutout by Vishi, our senior mentor! I am even paying my own college fees through freelancing.",
-            name: "Rohan",
-            role: "Student"
-        }
-    ];
-
-    const testimonialsTelugu = [
-        {
-            text: "నేను తరుణ్ 'వీడియో ఎడిటింగ్ కోహోర్ట్' లో చేరినప్పుడు నాకు ఎడిటింగ్ గురించి అస్సలు ఏమీ తెలియదు, నిజం చెప్పాలంటే కేవలం ఆసక్తితో జాయిన్ అయ్యాను. కానీ ఆ 4 వారాలు నా జీవితాన్ని మార్చేశాయి. ప్రీమియర్ ప్రో మరియు ఆఫ్టర్ ఎఫెక్ట్స్ నేర్చుకోవడం మాత్రమే కాకుండా, క్లయింట్స్ ని ఎలా సంప్రదించాలి, ఫ్రీలాన్సింగ్ ఎలా మొదలుపెట్టాలి అనేది చాలా క్లియర్ గా నేర్పించారు. కోర్సు పూర్తయిన వెంటనే నాకు మొదటి క్లయింట్ దొరికింది, ఇప్పుడు నేను నెలకు 40 వేల వరకు సంపాదిస్తున్నాను. ఒక సాధారణ స్టూడెంట్ గా మొదలై, ఇప్పుడు నా సొంత ఖర్చులు నేనే భరించే స్థాయికి రావడం నాకు చాలా గర్వంగా ఉంది. తరుణ్ అన్న మెంటర్ షిప్ మరియు ఆ కమ్యూనిటీ సపోర్ట్ వల్లే ఇది సాధ్యమైంది.",
-            name: "Sai Krishna",
-            role: "Freelance Editor"
-        },
-        {
-            text: "చాలా మంది అనుకుంటారు వీడియో ఎడిటింగ్ అంటే కేవలం సాఫ్ట్ వేర్ నేర్చుకోవడమే అని, కానీ ఈ కోహోర్ట్ లో చేరాక తెలిసింది ఎడిటింగ్ అంటే స్టోరీటెల్లింగ్ అని. తరుణ్ గారు ప్రతి చిన్న విషయాన్ని చాలా వివరంగా, ప్రాక్టికల్ గా చూపించారు. నేను ఇంజనీరింగ్ చదువుతూనే పార్ట్ టైమ్ గా ఎడిటింగ్ మొదలుపెట్టాను. మొదట్లో కష్టంగా అనిపించినా, లైవ్ క్లాసెస్ మరియు డౌట్ సెషన్స్ వల్ల చాలా ఈజీగా నేర్చుకోగలిగాను. ఇప్పుడు నేను 'ది బోరింగ్ ఎడిట్' లో ఇంటర్న్ షిప్ చేస్తున్నాను. నా తల్లిదండ్రులు కూడా చాలా సంతోషంగా ఉన్నారు. ఎవరైతే కెరీర్ లో ఎదగాలి అనుకుంటున్నారో వారికి ఇది బెస్ట్ ప్లాట్ ఫామ్.",
-            name: "Vamsi",
-            role: "Video Editor"
-        },
-        {
-            text: "ఈ కోహోర్ట్ కేవలం ఎడిటింగ్ క్లాస్ మాత్రమే కాదు, ఇదొక లైఫ్ చేంజింగ్ ఎక్స్ పీరియన్స్. నేను డిగ్రీ మధ్యలో ఉన్నప్పుడు ఏమి చేయాలో తెలియక సతమతమవుతున్న సమయంలో తరుణ్ గారి వీడియో చూసి ఇన్‌స్పైర్ అయి జాయిన్ అయ్యాను. ఆ నిర్ణయం నా కెరీర్ పాత్ ని మార్చేసింది. కోహోర్ట్ లో నేర్చుకున్న స్కిల్స్, ముఖ్యంగా '21 డేస్ ఛాలెంజ్' నాలో కాన్ఫిడెన్స్ ని పెంచింది. ఇప్పుడు నేను ఫుల్ టైమ్ ఫ్రీలాన్సర్ గా వర్క్ చేస్తున్నాను, మరియు యూకే, యుఎస్ క్లయింట్స్ తో డీల్ చేస్తున్నాను. ఒక తెలుగు కుర్రాడిగా గ్లోబల్ క్లయింట్స్ తో పని చేయడం నాకు దక్కిన గొప్ప అవకాశం.",
-            name: "Harsha",
-            role: "Professional Editor"
-        }
-    ];
-
-    // Distribute into 3 rows
-    const row1Data = [testimonials1[0], testimonialsTelugu[0], testimonials1[1], testimonials1[2], testimonials2[0]];
-    const row2Data = [testimonials1[3], testimonialsTelugu[1], testimonials1[4], testimonials2[1], testimonials2[2]];
-    const row3Data = [testimonials2[3], testimonials2[4], testimonialsTelugu[2], testimonials1[0], testimonials1[1]];
+    // Distribute into 3 rows (5, 5, 6)
+    const row1Data = allTestimonials.slice(0, 5);
+    const row2Data = allTestimonials.slice(5, 10);
+    const row3Data = allTestimonials.slice(10, 16);
 
 
 

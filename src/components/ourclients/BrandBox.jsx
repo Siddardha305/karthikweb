@@ -1,32 +1,23 @@
 import React from 'react';
 
 const BrandBox = () => {
-    // Online Images (Logos) - Global & Indian Tech Companies
+    // Local Brand Images
     const brands = [
-        // Global Giants
-        { name: "Google", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://google.com&size=128" },
-        { name: "Microsoft", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://microsoft.com&size=128" },
-        { name: "Amazon", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://amazon.com&size=128" },
-        { name: "Netflix", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://netflix.com&size=128" },
-        { name: "Meta", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://meta.com&size=128" },
-        { name: "Apple", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://apple.com&size=128" },
-        { name: "Spotify", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://spotify.com&size=128" },
-        { name: "Airbnb", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://airbnb.com&size=128" },
-
-        // Indian Tech & Startups
-        { name: "Flipkart", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://flipkart.com&size=128" },
-        { name: "Zomato", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://zomato.com&size=128" },
-        { name: "Swiggy", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://swiggy.com&size=128" },
-        { name: "Paytm", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://paytm.com&size=128" },
-        { name: "Ola", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://olacabs.com&size=128" },
-        { name: "Cred", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://cred.club&size=128" },
-        { name: "Zerodha", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://zerodha.com&size=128" },
-        { name: "Razorpay", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://razorpay.com&size=128" },
-        { name: "TCS", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://tcs.com&size=128" },
-        { name: "Infosys", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://infosys.com&size=128" },
-        { name: "Wipro", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://wipro.com&size=128" },
-        { name: "Zoho", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://zoho.com&size=128" },
-        { name: "Freshworks", logo: "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://freshworks.com&size=128" }
+        { name: "Brand 1", logo: "/images/Brands/1.png" },
+        { name: "Brand 2", logo: "/images/Brands/2.png" },
+        { name: "Brand 3", logo: "/images/Brands/3.png" },
+        { name: "Brand 4", logo: "/images/Brands/4.png" },
+        { name: "Brand 5", logo: "/images/Brands/5.png" },
+        { name: "Brand 6", logo: "/images/Brands/6.png" },
+        { name: "Brand 7", logo: "/images/Brands/7.png" },
+        { name: "Brand 8", logo: "/images/Brands/8.png" },
+        { name: "Brand 9", logo: "/images/Brands/9.png" },
+        { name: "Brand 10", logo: "/images/Brands/10.png" },
+        { name: "Brand 11", logo: "/images/Brands/11.png" },
+        { name: "Brand 12", logo: "/images/Brands/12.png" },
+        { name: "Brand 13", logo: "/images/Brands/13.png" },
+        { name: "Brand 14", logo: "/images/Brands/14.png" },
+        { name: "Brand 15", logo: "/images/Brands/15.png" }
     ];
 
     // Create randomized rows from the brands array
@@ -44,7 +35,7 @@ const BrandBox = () => {
                 <div className="brand-track scroll-normal">
                     {row1.map((brand, idx) => (
                         <div key={`r1-${idx}`} className="brand-logo" title={brand.name}>
-                            <img src={brand.logo} alt={brand.name} style={{ height: '35px', width: 'auto', borderRadius: '5px' }} />
+                            <img src={brand.logo} alt={brand.name} style={{ height: '55px', width: 'auto', borderRadius: '5px' }} />
                         </div>
                     ))}
                 </div>
@@ -55,7 +46,7 @@ const BrandBox = () => {
                 <div className="brand-track scroll-reverse">
                     {row2.map((brand, idx) => (
                         <div key={`r2-${idx}`} className="brand-logo" title={brand.name}>
-                            <img src={brand.logo} alt={brand.name} style={{ height: '35px', width: 'auto', borderRadius: '5px' }} />
+                            <img src={brand.logo} alt={brand.name} style={{ height: '55px', width: 'auto', borderRadius: '5px' }} />
                         </div>
                     ))}
                 </div>
@@ -66,7 +57,7 @@ const BrandBox = () => {
                 <div className="brand-track scroll-normal" style={{ animationDuration: '25s' }}>
                     {row3.map((brand, idx) => (
                         <div key={`r3-${idx}`} className="brand-logo" title={brand.name}>
-                            <img src={brand.logo} alt={brand.name} style={{ height: '35px', width: 'auto', borderRadius: '5px' }} />
+                            <img src={brand.logo} alt={brand.name} style={{ height: '55px', width: 'auto', borderRadius: '5px' }} />
                         </div>
                     ))}
                 </div>

@@ -2,10 +2,10 @@ export const coursesData = [
     {
         id: "premiere-pro-basic-advance",
         title: "Premiere Pro Basic – Advance 2025",
-        thumbnail: "/images/course-images/premier pro.png",
+        thumbnail: "/images/course-images/premierpro.png",
         duration: "12h 20m",
         instructorName: "Karthik Raghavarapu",
-        instructorAvatar: "/images/course-images/premier pro.png",
+        instructorAvatar: "/images/course-images/premierpro.png",
         category: "Video Editing",
         originalPrice: "₹1,999.00",
         currentPrice: "₹999.00",
@@ -25,24 +25,127 @@ export const coursesData = [
             "Color Correction & Color Grading"
         ],
         content: [
-            { title: "Join Our WhatsApp Community", isLink: true },
-            { title: "Chapter 01", lessons: ["Introduction", "Setup"] },
-            { title: "Chapter 02", lessons: ["Basics of Cutting"] },
-            { title: "Chapter 03", lessons: ["Transitions"] },
-            { title: "Chapter 04", lessons: ["Audio Mixing"] },
-            { title: "Chapter 05", lessons: ["Color Grading"] },
-            { title: "Chapter 06", lessons: ["Exporting"] },
-            { title: "Personal Training", lessons: ["One on One Session"] },
-            { title: "Chapter 07", lessons: ["Advanced Effects"] },
-            { title: "Chapter 08", lessons: ["Motion Graphics"] },
-            { title: "Chapter 09", lessons: ["Green Screen"] },
-            { title: "Chapter 10", lessons: ["Multi-Camera Editing"] },
-            { title: "Chapter 11", lessons: ["Optimizing Workflow"] },
-            { title: "Chapter 12", lessons: ["Project Management"] },
-            { title: "Chapter 13", lessons: ["Career Advice"] },
-            { title: "Fixing errors", lessons: ["Troubleshooting Common Issues"] },
-            { title: "Live Sessions", lessons: ["Recorded Live Q&A"] },
-            { title: "Updates", lessons: ["New Features 2025"] }
+            {
+                title: "Getting Started",
+                lessons: [
+                    "Join Our WhatsApp Community - 01:15",
+                    "Know Your System - 10:05",
+                    "Supportive software - 11:28",
+                    "Resources - 14:30"
+                ]
+            },
+            {
+                title: "Installation",
+                lessons: [
+                    "Download & Install Premiere Pro PC - 09:33",
+                    "Download & Install Premiere Pro PC V24 - 01:37",
+                    "Download & Install Premiere Pro Mac - 03:32",
+                    "Download & Install Premiere Pro PC V25 - 04:43",
+                    "Authenticator Error Fixing - 05:37"
+                ]
+            },
+            {
+                title: "Project Setup",
+                lessons: [
+                    "New Project V1 - 11:37",
+                    "New Project V2 - 03:38"
+                ]
+            },
+            {
+                title: "Interface & Organization",
+                lessons: [
+                    "Interface & Workspace - 11:00",
+                    "Setting-Up Preferences - 12:28",
+                    "Organizing Folders & Media - 10:18",
+                    "Understanding Project Panel & Media - 10:30",
+                    "Working With Bins - 08:07",
+                    "Understanding Source Panel - 09:19",
+                    "Understanding Sequence & it’s Settings - 21:58",
+                    "Understanding Timeline Panel & Button - 19:04",
+                    "Understanding Tools & Its Shortcuts - 45:44"
+                ]
+            },
+            {
+                title: "Assignments Set 1",
+                lessons: [
+                    "Assignment 1 - 42:47",
+                    "Assignment 2 - 38:51",
+                    "Assignment 3 - 31:03",
+                    "Assignment 4 - 06:05"
+                ]
+            },
+            {
+                title: "Motion & Effects",
+                lessons: [
+                    "Understanding Motion Controls - 14:31",
+                    "Understanding Keyframes - 08:42",
+                    "Understanding Blend Mode - 10:24",
+                    "Understanding Mask - 06:02",
+                    "Understanding & Working on Video Effects - 33:24",
+                    "Understanding & Working on Audio Effects - 17:43"
+                ]
+            },
+            {
+                title: "Personal Training",
+                lessons: [
+                    "Personal Training - 10:26"
+                ]
+            },
+            {
+                title: "Transitions",
+                lessons: [
+                    "Understanding Default Transitions - 08:46",
+                    "Understanding Preset Transitions - 06:03",
+                    "Understanding Overlay Transitions - 05:41",
+                    "Understanding Project Based Transitions - 08:13",
+                    "Understanding Plugin Transitions - 06:14",
+                    "Understanding Audio Transitions - 04:40"
+                ]
+            },
+            {
+                title: "Assignments Set 2",
+                lessons: [
+                    "Assignment 1 - 43:00",
+                    "Assignment 2 - 27:27",
+                    "Assignment 3 - 27:54"
+                ]
+            },
+            {
+                title: "Graphics & Advanced Tools",
+                lessons: [
+                    "Working on Text, Presets & Fonts - 27:03",
+                    "Understanding Essential Graphic Panel - 25:05",
+                    "Item Details in Project Panel - 08:00",
+                    "Video & Audio Details in Timeline - 22:18",
+                    "Timeline Details - 04:44",
+                    "Keyboard Shortcuts & Customization - 07:19"
+                ]
+            },
+            {
+                title: "Color Correction",
+                lessons: [
+                    "Color Correction Stage 1 - 05:43",
+                    "Color Correction Stage 2 - 11:00",
+                    "Color Correction Stage 3 - 09:31",
+                    "Color Correction Stage 4 - 06:25"
+                ]
+            },
+            {
+                title: "Export & Troubleshooting",
+                lessons: [
+                    "Self & Client Review - 08:53",
+                    "What is Render & How to Perform - 08:49",
+                    "Export as MP4 - 14:01",
+                    "Export as MP3 - 01:41",
+                    "Export as Transparent Video - 04:20",
+                    "Export in Adobe Media Encoder - 02:16",
+                    "Preset File Type Error - 02:00",
+                    "MSVCR110.dll Missing - 02:32",
+                    "Authenticator Error Fixing - 05:37",
+                    "Attend the upcoming live session - 03:12",
+                    "Media Encoder 2025 - 02:53"
+                ]
+            }
         ],
         materials: [
             "12 hours of video content",
@@ -69,10 +172,10 @@ export const coursesData = [
     {
         id: "mastering-after-effects-2025",
         title: "Mastering After Effects 2025",
-        thumbnail: "/images/course-images/after effects.png",
+        thumbnail: "/images/course-images/aftereffects.png",
         duration: "20h 30m",
         instructorName: "Karthik Raghavarapu",
-        instructorAvatar: "/images/course-images/premier pro.png",
+        instructorAvatar: "/images/course-images/premierpro.png",
         category: "Video Editing",
         originalPrice: "₹2,999.00",
         currentPrice: "₹1,499.00",
@@ -146,7 +249,7 @@ With “Mastering After Effects,” you’ll not only learn the technical aspect
         thumbnail: "/images/course-images/filmora.png",
         duration: "6h 30m",
         instructorName: "Karthik Raghavarapu",
-        instructorAvatar: "/images/course-images/premier pro.png",
+        instructorAvatar: "/images/course-images/premierpro.png",
         category: "Video Editing",
         originalPrice: "₹1,999.00",
         currentPrice: "₹899.00",
@@ -198,7 +301,7 @@ By the end of this course, you’ll have the confidence and expertise to craft v
         thumbnail: "/images/course-images/portfolio.png",
         duration: "3h 30m",
         instructorName: "Karthik Raghavarapu",
-        instructorAvatar: "/images/course-images/premier pro.png",
+        instructorAvatar: "/images/course-images/premierpro.png",
         category: "Photo Editing, Video Editing",
         originalPrice: "₹2,999.00",
         currentPrice: "₹1,499.00",
@@ -255,10 +358,10 @@ Video Editor’s Web Identity is a step-by-step course that teaches you how to c
     {
         id: "premiere-pro-personal-training",
         title: "Premiere Pro Personal Training",
-        thumbnail: "/images/course-images/premier pro.png",
+        thumbnail: "/images/course-images/PersonalTraining.jpg",
         duration: "25h",
         instructorName: "Karthik Raghavarapu",
-        instructorAvatar: "/images/course-images/premier pro.png",
+        instructorAvatar: "/images/course-images/premierpro.png",
         category: "Video Editing",
         originalPrice: "₹9,999.00",
         currentPrice: "₹6,999.00",

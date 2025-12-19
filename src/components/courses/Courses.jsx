@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Courses.css';
 import Pricing from '../pricing/Pricing';
 import OurClients from '../ourclients/OurClients';
@@ -7,18 +8,22 @@ const Courses = () => {
     // Data for courses as per reference image
     const courses = [
         {
+            id: "premiere-pro-basic-advance",
             title: "Premiere Pro Basic – Advance 2025",
-            image: "/images/course-images/premier pro.png",
+            image: "/images/course-images/premierpro.png",
         },
         {
+            id: "mastering-after-effects-2025",
             title: "Mastering After Effects 2025",
-            image: "/images/course-images/after effects.png",
+            image: "/images/course-images/aftereffects.png",
         },
         {
+            id: "mastering-filmora-with-ai",
             title: "Mastering Filmora With Ai",
             image: "/images/course-images/filmora.png",
         },
         {
+            id: "video-editors-web-identity",
             title: "Video Editor's Web Identity",
             image: "/images/course-images/portfolio.png",
         }
@@ -33,19 +38,15 @@ const Courses = () => {
 
                 <div className="courses-grid">
                     {courses.map((course, index) => (
-                        <div key={index} className="course-card">
+                        <Link to={`/course/${course.id}`} key={index} className="course-card" style={{ textDecoration: 'none', color: 'inherit' }}>
                             <div className="course-thumbnail">
                                 <img src={course.image} alt={course.title} />
                             </div>
 
                             <div className="course-details">
                                 <h3 className="course-title">{course.title}</h3>
-
-
                             </div>
-
-
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>

@@ -12,6 +12,9 @@ import AllCourses from './components/allcourses/AllCourses';
 import CourseDetail from './components/coursedetail/CourseDetail';
 import PersonalTraining from './components/personaltraining/PersonalTraining';
 import './App.css';
+import RefundPolicy from './components/policies/RefundPolicy';
+import TermsAndConditions from './components/policies/TermsAndConditions';
+import PrivacyPolicy from './components/policies/PrivacyPolicy';
 
 function App() {
   return (
@@ -32,6 +35,9 @@ function App() {
         <Route path="/all-courses" element={<AllCourses />} />
         <Route path="/course/:id" element={<CourseDetail />} />
         <Route path="/personal-training" element={<PersonalTraining />} />
+        <Route path="/refund-policy" element={<RefundPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </div>

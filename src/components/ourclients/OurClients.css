@@ -146,9 +146,9 @@
     /* Moved down to increase gap from text */
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1500px;
+    width: 1600px;
     /* Much larger diameter */
-    height: 1500px;
+    height: 1600px;
     z-index: 10;
     animation: rotateOrbit 80s linear infinite;
     /* Slower rotation for larger circle */
@@ -177,18 +177,10 @@
     animation: rotateCounter 80s linear infinite;
 }
 
-.floating-avatar:hover {
-    border-color: #8543c7;
-    z-index: 30;
-    /* Removed transform scale to avoid conflict with animation, or use wrapper for scale */
-}
+/* Hover effect removed as requested */
 
 /* Allow scaling on wrapper on hover? */
-.avatar-pos-wrapper:hover {
-    z-index: 30;
-    transform: translate(-50%, -50%) scale(1.2);
-    transition: transform 0.3s;
-}
+/* Wrapper hover removed */
 
 .floating-avatar img {
     width: 100%;

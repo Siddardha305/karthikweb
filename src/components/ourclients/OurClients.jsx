@@ -5,23 +5,42 @@ import BrandBox from './BrandBox';
 import FloatingAvatar from './FloatingAvatar';
 
 const OurClients = () => {
-    // Client Images from public/images/clients
     const clientImages = [
-        "/images/clients/Tiger-YT-Vaheed.jpg",
-        "/images/clients/VR-raja.jpg",
-        "/images/clients/Vasu-Tech.jpg",
-        "/images/clients/Village-vihari.jpg",
-        "/images/clients/Web_Photo_Editor.jpg",
-        "/images/clients/amihg2d6tjo05wldvryd.jpg",
-        "/images/clients/lk60nfdi59o8er4n6pb6.webp",
-        "/images/clients/llggnkinxlqpzzl7jikp.jpg",
-        "/images/clients/telugu-assets.jpg",
-        "/images/clients/v5cbwvd6vtsvvq3o06i6.jpg",
-        "/images/clients/vsist.jpg"
+        "/images/clients/1.png",
+        "/images/clients/2.png",
+        "/images/clients/3.png",
+        "/images/clients/4.png",
+        "/images/clients/5.png",
+        "/images/clients/6.png",
+        "/images/clients/7.png",
+        "/images/clients/8.png",
+        "/images/clients/9.png",
+        "/images/clients/10.png",
+        "/images/clients/11.png",
+        "/images/clients/12.png",
+        "/images/clients/13.png",
+        "/images/clients/14.png",
+        "/images/clients/15.png",
+        "/images/clients/16.png",
+        "/images/clients/17.png",
+        "/images/clients/18.png",
+        "/images/clients/19.png",
+        "/images/clients/20.png",
+        "/images/clients/21.png",
+        "/images/clients/22.png",
+        "/images/clients/23.png",
+        "/images/clients/24.png",
+        "/images/clients/25.png",
+        "/images/clients/26.png",
+        "/images/clients/27.png",
+        "/images/clients/28.png",
+        "/images/clients/29.png",
+        "/images/clients/30.png",
     ];
 
     // Generate positions for a circle
-    const totalAvatars = 16; // 8 visible in arc -> ~16 total in circle
+    // Generate positions for a circle
+    const totalAvatars = 21; // Limit items on circle to increase gap
     const avatars = Array.from({ length: totalAvatars }).map((_, i) => {
         const angleDeg = (360 / totalAvatars) * i;
         const angleRad = (angleDeg - 90) * (Math.PI / 180); // -90 to start at top
@@ -31,7 +50,7 @@ const OurClients = () => {
         const y = 50 + radiusPercent * Math.sin(angleRad);
 
         // Fixed size for all avatars
-        const size = 110; // Increased size to match reference
+        const size = 120; // Increased picture size
 
         // Assign image cyclically
         const image = clientImages[i % clientImages.length];

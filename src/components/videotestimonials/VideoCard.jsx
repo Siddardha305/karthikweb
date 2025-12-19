@@ -42,7 +42,11 @@ const VideoCard = ({ videoSrc, posterSrc, studentName, role }) => {
                 />
                 {!isPlaying && (
                     <div className="play-overlay">
-                        <div className="play-icon">▶</div>
+                        <div className="play-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 5V19L19 12L8 5Z" />
+                            </svg>
+                        </div>
                     </div>
                 )}
             </div>
