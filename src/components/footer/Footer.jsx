@@ -32,10 +32,10 @@ const Footer = () => {
                 <div className="footer-links-container">
                     <div className="footer-column">
                         <h4 className="footer-heading">Quick Links</h4>
-                        <a href="#" className="footer-link">About</a>
-                        <Link to="/privacy-policy" className="footer-link">Privacy Policy</Link>
-                        <Link to="/terms-and-conditions" className="footer-link">Terms & Conditions</Link>
-                        <Link to="/refund-policy" className="footer-link">Refund Policy</Link>
+                        <a href="https://planatb.com/about/" className="footer-link">About</a>
+                        <a href="https://planatb.com/privacy-policy/" className="footer-link">Privacy Policy</a>
+                        <a href="https://planatb.com/terms-conditions/" className="footer-link">Terms & Conditions</a>
+                        <a href="https://planatb.com/refund_returns/" className="footer-link">Refund Policy</a>
                     </div>
 
                     <div className="footer-column">
@@ -49,9 +49,9 @@ const Footer = () => {
 
                     <div className="footer-column">
                         <h4 className="footer-heading">Support</h4>
-                        <a href="#" className="footer-link">Contact Us</a>
-                        <a href="#" className="footer-link">Help & Support</a>
-                        <a href="#" className="footer-link">Copyright</a>
+                        <a href="https://planatb.com/contact-us/" className="footer-link">Contact Us</a>
+                        <a href="https://planatb.com/contact-us/" className="footer-link">Help & Support</a>
+                        <a href="https://planatb.com/copyright/" className="footer-link">Copyright</a>
                     </div>
                 </div>
             </div>
