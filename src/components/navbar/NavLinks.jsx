@@ -12,9 +12,7 @@ const NavLinks = () => {
             <li className="nav-item">
                 <Link to="/personal-training" className={`nav-link ${location.pathname === '/personal-training' ? 'active' : ''}`}>Personal Training</Link>
             </li>
-            <li>
-                <Link to="/course/premiere-pro-basic-advance" className={`nav-link ${location.pathname === '/course/premiere-pro-basic-advance' ? 'active' : ''}`}>Direct Purchase</Link>
-            </li>
+
             <li><a href="#" className="nav-link">Hire from us</a></li>
         </ul>
     );

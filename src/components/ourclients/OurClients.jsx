@@ -13,7 +13,6 @@ const OurClients = () => {
         "/images/clients/5.png",
         "/images/clients/6.png",
         "/images/clients/7.png",
-        "/images/clients/8.png",
         "/images/clients/9.png",
         "/images/clients/10.png",
         "/images/clients/11.png",
@@ -29,7 +28,6 @@ const OurClients = () => {
         "/images/clients/21.png",
         "/images/clients/22.png",
         "/images/clients/23.png",
-        "/images/clients/24.png",
         "/images/clients/25.png",
         "/images/clients/26.png",
         "/images/clients/27.png",
@@ -60,6 +58,11 @@ const OurClients = () => {
 
     return (
         <section className="our-clients-section">
+            <div className="client-bg-elements">
+                <div className="client-orb orb-1"></div>
+                <div className="client-orb orb-2"></div>
+            </div>
+
             {/* Rotating Orbit Container */}
             <div className="avatar-orbit-container">
                 {avatars.map((data, idx) => (

@@ -10,6 +10,7 @@ const PersonalTraining = () => {
         <div> {/* Removed padding to let Hero cover top */}
             {/* Custom Hero Section */}
             <section className="hero-section">
+                <div className="hero-background-image" style={{ backgroundImage: "url('/images/Editing-Nerchukundam-min.webp')" }}></div>
                 <div className="hero-content">
                     <Badge text="Karthik Raghavarapu Presents" /> {/* Updated text match screenshot roughly */}
 

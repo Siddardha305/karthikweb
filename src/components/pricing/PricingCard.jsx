@@ -1,8 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import CTAButton from '../hero2/CTAButton';
 import './Pricing.css';
 
-const PricingCard = ({ price, title, subtitle, features, buttonText = "Enroll Now", recommended = false, variant = 'base' }) => {
+const PricingCard = ({ price, title, subtitle, features, buttonText = "Enroll Now", recommended = false, variant = 'base', link }) => {
+    const navigate = useNavigate();
+
+    const handleEnrollClick = () => {
+        if (!link) return;
+
+        if (link.startsWith('http')) {
+            window.location.href = link;
+        } else {
+            navigate(link);
+        }
+    };
+
     return (
         <div className={`pricing-card ${variant} ${recommended ? 'recommended' : ''}`}>
             {recommended && <div className="most-popular-badge">Most Popular</div>}
@@ -27,7 +40,7 @@ const PricingCard = ({ price, title, subtitle, features, buttonText = "Enroll No
             </div>
 
             <div className="pricing-footer">
-                <CTAButton text={buttonText} className="pricing-btn" />
+                <CTAButton text={buttonText} className="pricing-btn" onClick={handleEnrollClick} />
             </div>
         </div>
     );

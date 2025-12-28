@@ -5,30 +5,23 @@ const VideoCard = ({ videoSrc, posterSrc, studentName, role }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
-    const handleMouseEnter = () => {
-        if (videoRef.current) {
-            videoRef.current.muted = false; // Unmute on hover
-            videoRef.current.play().catch(error => {
-                console.error("Autoplay prevented:", error);
-            });
-            setIsPlaying(true);
-        }
-    };
+    const togglePlay = () => {
+        if (!videoRef.current) return;
 
-    const handleMouseLeave = () => {
-        if (videoRef.current) {
+        if (isPlaying) {
             videoRef.current.pause();
-            videoRef.current.currentTime = 0; // Optional: reset video
-            videoRef.current.muted = true;
             setIsPlaying(false);
+        } else {
+            videoRef.current.muted = false;
+            videoRef.current.play().catch(error => console.error("Play error:", error));
+            setIsPlaying(true);
         }
     };
 
     return (
         <div
             className="video-card"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onClick={togglePlay}
         >
             <div className="video-wrapper">
                 <video

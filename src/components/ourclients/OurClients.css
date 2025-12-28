@@ -28,6 +28,49 @@
     z-index: 0;
 }
 
+.client-bg-elements {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.client-orb {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+}
+
+.orb-1 {
+    top: -20%;
+    left: -10%;
+    background: #8543c7;
+    animation: floatOrb 20s infinite ease-in-out;
+}
+
+.orb-2 {
+    bottom: -20%;
+    right: -10%;
+    background: #4c2185;
+    animation: floatOrb 25s infinite ease-in-out reverse;
+}
+
+@keyframes floatOrb {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, 30px);
+    }
+}
+
 .clients-content-wrapper {
     position: relative;
     z-index: 10;

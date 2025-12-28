@@ -15,7 +15,8 @@ const Pricing = ({ filterTitle }) => {
                 "Monthly Q&A session",
                 "Lifetime access to course"
             ],
-            variant: 'essential'
+            variant: 'essential',
+            link: "/course/premiere-pro-basic-advance"
         },
         {
             price: "₹6,999",
@@ -34,7 +35,8 @@ const Pricing = ({ filterTitle }) => {
                 "Access to personal contact number"
             ],
             recommended: true,
-            variant: 'elite'
+            variant: 'elite',
+            link: "https://payments.cashfree.com/forms/prpt"
         },
         {
             price: "₹9,999",
@@ -52,7 +54,8 @@ const Pricing = ({ filterTitle }) => {
                 "Job Assistance",
                 "Access to personal contact number"
             ],
-            variant: 'ultimate'
+            variant: 'ultimate',
+            link: "https://payments.cashfree.com/forms/1-1-PT"
         }
     ];
 
@@ -61,8 +64,8 @@ const Pricing = ({ filterTitle }) => {
         : plans;
 
     return (
-        <section className="pricing-section">
-            <h2 className="pricing-section-title">Plans For This Program</h2>
+        <section className="pricing-section" id="plans">
+            <h2 className="pricing-section-title">Plans for our program</h2>
             <div className="pricing-grid">
                 {filteredPlans.map((plan, index) => (
                     <PricingCard key={index} {...plan} />

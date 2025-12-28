@@ -24,9 +24,15 @@ const BrandBox = () => {
     const shuffle = (array) => [...array].sort(() => 0.5 - Math.random());
 
     // Create 3 rows with duplicated content for marquee
-    const row1 = [...shuffle(brands), ...shuffle(brands)];
-    const row2 = [...shuffle(brands), ...shuffle(brands)];
-    const row3 = [...shuffle(brands), ...shuffle(brands)];
+    // Create 3 rows with duplicated content for seamless loop
+    const shuffled1 = shuffle(brands);
+    const row1 = [...shuffled1, ...shuffled1];
+
+    const shuffled2 = shuffle(brands);
+    const row2 = [...shuffled2, ...shuffled2];
+
+    const shuffled3 = shuffle(brands);
+    const row3 = [...shuffled3, ...shuffled3];
 
     return (
         <div className="brand-box">
