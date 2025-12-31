@@ -13,7 +13,7 @@ const NavLinks = () => {
                 <Link to="/personal-training" className={`nav-link ${location.pathname === '/personal-training' ? 'active' : ''}`}>Personal Training</Link>
             </li>
 
-            <li><a href="#" className="nav-link">Hire from us</a></li>
+            <li><Link to="/hire-from-us" className={`nav-link ${location.pathname === '/hire-from-us' ? 'active' : ''}`}>Hire from us</Link></li>
         </ul>
     );
 };

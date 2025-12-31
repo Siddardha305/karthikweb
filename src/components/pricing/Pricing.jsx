@@ -64,7 +64,12 @@ const Pricing = ({ filterTitle }) => {
         : plans;
 
     return (
-        <section className="pricing-section" id="plans">
+        <section className="pricing-section" id="plans" style={{
+            backgroundColor: '#000000',
+            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
+            backgroundSize: '40px 40px'
+        }}>
             <h2 className="pricing-section-title">Plans for our program</h2>
             <div className="pricing-grid">
                 {filteredPlans.map((plan, index) => (

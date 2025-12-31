@@ -12,6 +12,7 @@ import './App.css';
 import RefundPolicy from './components/policies/RefundPolicy';
 import TermsAndConditions from './components/policies/TermsAndConditions';
 import PrivacyPolicy from './components/policies/PrivacyPolicy';
+import HireFromUs from './components/hirefromus/HireFromUs';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/refund-policy" element={<RefundPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/hire-from-us" element={<HireFromUs />} />
       </Routes>
       <Footer />
     </div>

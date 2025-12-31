@@ -1,6 +1,5 @@
 import React from 'react';
 import '../hero/Hero.css'; // Reusing Hero styles
-import ColorBends from '../colorbends/ColorBends';
 import Badge from '../hero/Badge';
 import Pricing from '../pricing/Pricing';
 // Assuming VideoTestimonials is in src/components/videotestimonials/VideoTestimonials.jsx
@@ -10,21 +9,14 @@ const PersonalTraining = () => {
     return (
         <div> {/* Removed padding to let Hero cover top */}
             {/* Custom Hero Section */}
-            <section className="hero-section">
-                <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
-                    <ColorBends
-                        colors={["#000000", "#4c2185", "#8543c7"]}
-                        rotation={50}
-                        speed={0.7}
-                        scale={1.2}
-                        frequency={1.5}
-                        warpStrength={1.2}
-                        mouseInfluence={0.8}
-                        parallax={0.6}
-                        noise={0.08}
-                        transparent={false}
-                    />
-                </div>
+            <section className="hero-section" style={{
+                backgroundColor: '#000000',
+                backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)`,
+                backgroundSize: '40px 40px',
+                minHeight: '80vh',
+                justifyContent: 'center'
+            }}>
                 <div className="hero-content">
                     <Badge text="Karthik Raghavarapu Presents" /> {/* Updated text match screenshot roughly */}
 
@@ -49,6 +41,22 @@ const PersonalTraining = () => {
                             Join now
                         </button>
                     </div>
+
+                </div>
+
+                <div style={{ position: 'absolute', bottom: '2rem', left: '50%', transform: 'translateX(-50%)', display: 'flex', justifyContent: 'center', zIndex: 10 }}>
+                    <svg
+                        className="arrow-bounce"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        onClick={() => document.getElementById('plans')?.scrollIntoView({ behavior: 'smooth' })}
+                    >
+                        <path d="M12 5V19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M19 12L12 19L5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                 </div>
 
             </section>
