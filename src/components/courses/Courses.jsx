@@ -15,7 +15,7 @@ const Courses = () => {
         {
             id: "mastering-after-effects-2025",
             title: "Mastering After Effects 2025",
-            image: "/images/course-images/aftereffects.png",
+            image: "/images/course-images/After-Effects.jpg",
         },
         {
             id: "mastering-filmora-with-ai",
@@ -44,7 +44,7 @@ const Courses = () => {
                             </div>
 
                             <div className="course-details">
-                                <h3 className="course-title" style={course.id === 'mastering-filmora-with-ai' ? { fontFamily: "'Satoshi', sans-serif" } : {}}>{course.title}</h3>
+                                <h3 className="course-title">{course.title}</h3>
                             </div>
                         </Link>
                     ))}

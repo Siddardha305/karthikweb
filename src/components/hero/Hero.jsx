@@ -40,7 +40,7 @@ const Hero = () => {
                             onClick={() => setIsPlaying(true)}
                         >
                             <img
-                                src="/images/course-images/premierpro.png"
+                                src="/images/course-images/Home-Screen.jpg"
                                 alt="Premiere Pro Course"
                                 style={{
                                     width: '100%',

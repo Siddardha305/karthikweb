@@ -5,7 +5,7 @@ import './Pricing.css';
 const Pricing = ({ filterTitle }) => {
     const plans = [
         {
-            price: "₹999",
+            price: "₹1,299",
             title: "Premiere Pro Beginners - Advance",
             subtitle: "Learn video editing with zero experience",
             features: [
@@ -19,7 +19,7 @@ const Pricing = ({ filterTitle }) => {
             link: "/course/premiere-pro-basic-advance"
         },
         {
-            price: "₹6,999",
+            price: "₹7,999",
             title: "Premiere Pro Personal Training",
             subtitle: "21 Days Online Training",
             features: [
@@ -39,7 +39,7 @@ const Pricing = ({ filterTitle }) => {
             link: "https://payments.cashfree.com/forms/prpt"
         },
         {
-            price: "₹9,999",
+            price: "₹12,999",
             title: "Premiere Pro Personal Training",
             subtitle: "21 Days Online Training",
             features: [

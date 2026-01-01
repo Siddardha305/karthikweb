@@ -19,6 +19,16 @@
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
 }
 
+/* Vignette overlay */
+.pricing-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, #000000 90%);
+    pointer-events: none;
+    z-index: 1;
+}
+
 .pricing-section-title {
 
     font-size: 3rem;
@@ -47,7 +57,7 @@
     position: relative;
     overflow: hidden;
     padding: 3.5rem 2.5rem;
-    border-radius: 30px;
+    border-radius: 12px;
     flex: 1 1 290px;
     max-width: 460px;
     /* Decreased width */
